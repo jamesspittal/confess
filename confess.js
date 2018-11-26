@@ -412,7 +412,7 @@ var confess = {
     },
 
     processArgs: function (config, contract) {
-        var a = 0;
+        var a = 1;
         var ok = true;
         contract.forEach(function(argument) {
             if (a < system.args.length) {
