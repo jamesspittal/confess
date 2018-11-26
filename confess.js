@@ -1,3 +1,4 @@
+var system = require('system');
 var fs = require('fs');
 var confess = {
 
@@ -414,8 +415,8 @@ var confess = {
         var a = 0;
         var ok = true;
         contract.forEach(function(argument) {
-            if (a < phantom.args.length) {
-                config[argument.name] = phantom.args[a];
+            if (a < system.args.length) {
+                config[argument.name] = system.args[a];
             } else {
                 if (argument.req) {
                     console.log('"' + argument.name + '" argument is required. This ' + argument.desc + '.');
